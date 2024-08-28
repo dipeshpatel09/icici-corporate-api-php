@@ -1,9 +1,5 @@
 <?php
 
-if (!defined('sugarEntry') || !sugarEntry) {
-	die('Not A Valid Entry Point');
-}
-
 /**
  * Class ICICIBankCorporateAPI
  *
@@ -39,15 +35,15 @@ class ICICIBankCorporateAPI {
         $this->encryptionMethod = 'AES-256-CBC';
 
 		if ($this->environment == 'Sandbox') {
-            $this->caCertPath = '/path/to/your/certificates/YOUR_SANDBOX_CERTIFICATE.pem';
-            $this->publicKey = file_get_contents('/path/to/your/certificates/YOUR_SANDBOX_PUBLIC_KEY.cer');
+            $this->caCertPath = '/etc/ssl/certs/YOUR_SANDBOX_CERTIFICATE.pem';
+            $this->publicKey = file_get_contents('/etc/ssl/certs/YOUR_SANDBOX_PUBLIC_KEY.cer');
             $this->clientId = 'YOUR_SANDBOX_CLIENT_ID';
             $this->clientSecret = 'YOUR_SANDBOX_CLIENT_SECRET';
 		}
 
 		if ($this->environment == 'Live') {
-            $this->caCertPath = '/path/to/your/certificates/YOUR_LIVE_CERTIFICATE.pem';
-            $this->publicKey = file_get_contents('/path/to/your/certificates/YOUR_LIVE_PUBLIC_KEY.cer');
+            $this->caCertPath = '/etc/ssl/certs/YOUR_LIVE_CERTIFICATE.pem';
+            $this->publicKey = file_get_contents('/etc/ssl/certs/YOUR_LIVE_PUBLIC_KEY.cer');
             $this->clientId = 'YOUR_LIVE_CLIENT_ID';
             $this->clientSecret = 'YOUR_LIVE_CLIENT_SECRET';
 		}
@@ -71,7 +67,7 @@ class ICICIBankCorporateAPI {
         $GLOBALS['log']->fatal($this->debugLogData);
 
 		if ($this->debug) {
-            $logFilePath = 'custom/service/oepl_icici_v4/icici_api.txt';
+            $logFilePath = 'debug.log';
             if ($this->getFileSize($logFilePath, 'MB') > 2) {
                 @rename($logFilePath, $logFilePath . '.bk');
 			}

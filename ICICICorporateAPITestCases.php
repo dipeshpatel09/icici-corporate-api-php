@@ -3,10 +3,6 @@
 /**
  * This script demonstrates the usage of the ICICIBankCorporateAPI class.
  * It includes examples of different API calls such as CIBRegistration, DealerBalanceCheck, DealerCollection, and PaymentStatusInquiry.
- *
- * References:
- * - AES Encryption/Decryption: https://www.devglan.com/online-tools/aes-encryption-decryption
- * - RSA Encryption/Decryption: https://www.devglan.com/online-tools/rsa-encryption-decryption
  */
 
 // Different Public and Private certificates should be used for encryption/decryption
