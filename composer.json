@@ -1,0 +1,26 @@
+{
+    "name": "krishna035/icici-bank-corporate-api",
+    "description": "PHP implementation for integrating with ICICI Bank Corporate API.",
+    "type": "library",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Krishna035\\ICICIBankCorporateAPI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Krishna035\\ICICIBankCorporateAPITest\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krishna Gajera",
+            "email": "krishna.oepl@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
